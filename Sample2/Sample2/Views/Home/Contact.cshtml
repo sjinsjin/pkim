@@ -1,0 +1,48 @@
+﻿@model Sample2.Models.Registration
+
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<div class="newOuter row">
+<div class="col-md-12">
+
+    <h2>Contact</h2>
+    <p>
+        <span>949.200.7192</span>
+    </p>
+
+
+
+
+<header>
+    <h2>Email</h2>
+</header>
+<p>
+    @Html.ValidationSummary()
+</p>
+
+@using (Html.BeginForm())
+{
+    <p>Name: @Html.TextBoxFor(model => model.Name)</p>
+    <p>Email: @Html.TextBoxFor(model => model.Email)</p>
+    <p>Mobile: @Html.TextBoxFor(model => model.Mobile)</p>
+    <p>Message:</p>
+    <p>@Html.TextAreaFor(model => model.Message)</p>
+    <p>
+        <input type="submit" value="Submit" />
+    </p>
+}       
+    
+    <header>
+        <h2>Address</h2>
+    </header>
+    <p>
+        4540 Campus Dr<br />
+        Newport Beach, CA 92660
+    </p>
+</div>
+</div>

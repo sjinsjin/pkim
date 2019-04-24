@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#more {display: none;}
+</style>
+</head>
+<body>
+<div class="newOuter row">
+<div class="col-md-12">
+
+<h2>ABOUT US</h2>
+<p>PKIM, Inc. was founded on January, 1997 in order to provide a total systems solution to retail, wholesale distribution and manufacturing for the apparel industry. PKIM, Inc. has developed an enterprise database model for apparel industry businesses and it has been applied to industries with similar inventory structures. Utilizing the enterprise database and application solution, our customer can expand their business operations without limiting their IT solutions.<span id="dots">...</span><span id="more">Adaptive Garment Manufacturing System (AGMS™) enables you to access real time production control of your garment manufacturing processes.
+
+POSiT™, Point of Sales for single or multiple chain stores, enables you to have a control over Sales and Inventory Movements for the apparel and other retail businesses. Utilizing OPOS standard, POSiT has been extended its application to restaurant and grocery market applications.
+
+Wholesale Inventory Tracking System (WITS™) is a complete ERP solution with capability for customizing modules such as A/R.
+
+All of our application in retail, wholesale and manufacturing application uses one enterprice database to share the same inventory and customer information. And the database is designed for multiple locations and all provides QuickBooks Interfaces for Invoice, Payment, Credit Memo, Customer and Items. A simple and unique data replication has been developed in additon to the tool provided by relational database replication procedures implemented for our customer with multiple locations.
+
+PKIM, Inc. has been developing a DVR with POS screen integration in one physical unit (ePOSDVR™) with incorporation from both Windows and Linux DVR that gives retail customers a more secured POS environment to do better business without any additional devices or costs.
+
+Our industry-leading products use the most current database solutions, data access and data movement products, as well as enterprise application development tools.
+
+We are committed to serving your business needs through analyzing, designing, and implementing the most current technology to enhance your existing system's operation to the highest performance..</span></p>
+<button onclick="myFunction()" id="myBtn">Read more</button>
+
+<script>
+    function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+
+<br><br/>
+<br><br/>
+    <h2>CLIENTS</h2>
+        <a href="https://www.thesourceoc.com/">
+            <img src="~/Images/THESOURCE.jpg" />
+        </a>
+        <a href="https://www.plazamexico.com/">
+            <img src="~/Images/PLAZAMEXICO.jpg" /height="70" width="200">
+        </a>
+        <a href="http://www.koos.com/">
+            <img src="~/Images/KOOS.jpg" />
+        </a>
+        <a href="https://www.shopmanicshoes.com/">
+            <img src="~/Images/MANICSHOES.jpg" />
+        </a>
+        <a href ="http://www.kimchaecpa.com/">
+            <img src="~/Images/KIMCHAECPA.jpg" />
+        </a>
+        <a href ="https://www.kaashusa.com/">
+            <img src="~/Images/KAASH.jpg" />
+        </a>
+        <a href ="http://www.irvinespa.com/">
+            <img src="~/Images/ISPA.jpg" />
+        </a>
+        <a href="http://www.theimperialspa.com/">
+        <img src="~/Images/IMPERIALSPA.jpg" />
+        </a>
+        <a href ="https://www.dahdoulinc.com/">
+            <img src="~/Images/Dahdoul.jpg" />
+        </a>
+        <a href ="https://k-momo.com/"
+        <img src="~/Images/KMOMO.jpg" />
+        </a>
+
+</div>
+</div>
+</body>
+</html>

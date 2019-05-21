@@ -173,10 +173,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -262,6 +259,7 @@
     <Content Include="Images\SEcucity.jpg" />
     <Content Include="Images\THESOURCE.jpg" />
     <Content Include="Images\twitter.png" />
+    <Content Include="Images\Zebra.jpg" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -315,9 +313,15 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Home\Service.cshtml" />
     <Content Include="Views\Home\Aldelo.cshtml" />
+    <Content Include="Views\Home\Email.cshtml" />
+    <Content Include="Views\Home\Itsupport.cshtml" />
+    <Content Include="Views\Home\Security.cshtml" />
+    <Content Include="Views\Home\Software.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

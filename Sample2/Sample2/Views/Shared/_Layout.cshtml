@@ -4,29 +4,15 @@
         <meta charset="utf-8" />
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <link href="//fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css">
-
-        <meta name="viewport" content="width=device-width" />
-            <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,800,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
-    <link href="https://cdn10.bigcommerce.com/r-1c02df274aa22f3163f61357818ba064e27471d8/themes/Outdoor/Styles/uniform.default.css" media="all" type="text/css" rel="stylesheet" />
-    <link href="https://cdn9.bigcommerce.com/r-ac92bea11f30010afbe42e24254528b097a3c901/themes/__master/Styles/styles.css" type="text/css" rel="stylesheet" /><link href="https://cdn1.bigcommerce.com/server3100/5acae/templates/__custom/Styles/styles.css?t=1426292851" media="all" type="text/css" rel="stylesheet" />
-    <link href="https://cdn9.bigcommerce.com/r-1c02df274aa22f3163f61357818ba064e27471d8/themes/Outdoor/Styles/iselector.css" media="all" type="text/css" rel="stylesheet" />
-    <link href="https://cdn9.bigcommerce.com/r-1c02df274aa22f3163f61357818ba064e27471d8/themes/Outdoor/Styles/flexslider.css" media="all" type="text/css" rel="stylesheet" />
-    <link href="https://cdn1.bigcommerce.com/server3100/5acae/templates/__custom/Styles/slide-show.css?t=1426292851" media="all" type="text/css" rel="stylesheet" />
-    <link href="https://cdn1.bigcommerce.com/server3100/5acae/templates/__custom/Styles/styles-slide-show.css?t=1426292851" media="all" type="text/css" rel="stylesheet" />
-    <link href="https://cdn9.bigcommerce.com/r-1c02df274aa22f3163f61357818ba064e27471d8/themes/Outdoor/Styles/social.css" media="all" type="text/css" rel="stylesheet" />
+        @Styles.Render("~/Content/Site.css")
+        <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
+    <link href="https://cdn1.bigcommerce.com/server3100/5acae/templates/__custom/Styles/styles.css?t=1426292851" media="all" type="text/css" rel="stylesheet" />
     <link href="https://cdn1.bigcommerce.com/server3100/5acae/templates/__custom/Styles/white.css?t=1426292851" media="all" type="text/css" rel="stylesheet" />
-    <link href="https://cdn1.bigcommerce.com/server3100/5acae/templates/__custom/Styles/theme.css?t=1426292851" media="all" type="text/css" rel="stylesheet" />
-    <link href="https://cdn1.bigcommerce.com/server3100/5acae/templates/__custom/Styles/custom.css?t=1426292851" type="text/css" rel="stylesheet" /><link href="https://cdn9.bigcommerce.com/r-ac92bea11f30010afbe42e24254528b097a3c901/themes/__master/Styles/product.attributes.css" type="text/css" rel="stylesheet" /><link href="https://cdn9.bigcommerce.com/r-cce6dafbaa7dc1af29e19e03e4c003cc9681c16b/javascript/jquery/themes/cupertino/ui.all.css" type="text/css" rel="stylesheet" /><link href="https://cdn9.bigcommerce.com/r-1c02df274aa22f3163f61357818ba064e27471d8/themes/Outdoor/Styles/product.quickview.css" type="text/css" rel="stylesheet" /><link href="https://cdn9.bigcommerce.com/r-cce6dafbaa7dc1af29e19e03e4c003cc9681c16b/javascript/superfish/css/store.css" type="text/css" rel="stylesheet" /><link type="text/css" rel="stylesheet" href="https://cdn9.bigcommerce.com/r-cce6dafbaa7dc1af29e19e03e4c003cc9681c16b/javascript/jquery/plugins/imodal/imodal.css" />
+    <link href="https://cdn1.bigcommerce.com/server3100/5acae/templates/__custom/Styles/custom.css?t=1426292851" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
 
 
-        @Styles.Render("~/Content/bootstrap.css")
-        @Styles.Render("~/Content/bootstrap-theme.css")
-        @Styles.Render("~/Content/bootstrap-theme.min.css")
-        @Styles.Render("~/Content/bootstrap.min.css")
     </head>
     <body>
 <div id="TopMenu">
@@ -50,14 +36,12 @@
                         <li>@Html.ActionLink("Product", "About", "Home")</li>
                     </li>
                     <li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    </li>
-                    <li>
                         <li>@Html.ActionLink("Service", "Service", "Home")</li>
                     </li>
                     <li>
-                        <li>@Html.ActionLink("Aldelo", "Aldelo", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     </li>
+
                 </ul>
    
                     
@@ -74,15 +58,17 @@
                 @RenderBody()
             </section>
         </div>
-        <footer>
+        <style>
+            .bg-4 { 
+                background-color: #ccffcc;
+                color: #ffffff;
+                    }
+</style>
+        <footer class="container-fluid bg-4 text-center">
                     <br></br>
                     <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-    <div class="newOuter row">
-        <div class="col-md-12">
+
+
 
                     <a href="https://www.facebook.com/">
                         <img src="~/Images/facebook.png" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
@@ -90,8 +76,7 @@
                     <a href="https://twitter.com/">
                         <img src="~/Images/twitter.png" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
                     </a>
-                </div>
-            </div>
+
         </footer>
 
         @Scripts.Render("~/bundles/jquery")

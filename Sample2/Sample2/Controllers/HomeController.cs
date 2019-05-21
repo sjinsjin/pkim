@@ -17,6 +17,17 @@ namespace Sample2.Controllers
 
             return View();
         }
+        [HttpPost]
+        public ActionResult Index(Registration regg)
+        {
+            if (ModelState.IsValid)
+            {
+                WebMail.Send(to: "sjin@pkim.com", subject: "Request and Qustion", body: "<br/>Name  : " + regg.Name +
+                    "<br/>Phone Number: " + regg.Mobile + "<br/>Email  : " + regg.Email + "<br/>Message: " + regg.Message);
+            }
+
+            return RedirectToAction("Email");
+        }
 
         public ActionResult About()
         {
@@ -40,7 +51,7 @@ namespace Sample2.Controllers
                     "<br/>Phone Number: " + reg.Mobile + "<br/>Email  : " + reg.Email + "<br/>Message: " + reg.Message);
             }
 
-            return RedirectToAction("Contact");
+            return RedirectToAction("Email");
         }
 
         public ActionResult Service()
@@ -53,6 +64,22 @@ namespace Sample2.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+        public ActionResult Email()
+        {
+            return View();
+        }
+        public ActionResult Itsupport()
+        {
+            return View();
+        }
+        public ActionResult Security()
+        {
+            return View();
+        }
+        public ActionResult Software()
+        {
             return View();
         }
     }

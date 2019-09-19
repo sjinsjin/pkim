@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="//fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css">
+        @Styles.Render("~/Content/Site.css")
+        <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
+    <link href="https://cdn1.bigcommerce.com/server3100/5acae/templates/__custom/Styles/styles.css?t=1426292851" media="all" type="text/css" rel="stylesheet" />
+    <link href="https://cdn1.bigcommerce.com/server3100/5acae/templates/__custom/Styles/white.css?t=1426292851" media="all" type="text/css" rel="stylesheet" />
+    <link href="https://cdn1.bigcommerce.com/server3100/5acae/templates/__custom/Styles/custom.css?t=1426292851" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+
+
+    </head>
+    <body>
+<div id="TopMenu">
+    <div class="Inner">
+
+                <a href='@Url.Action("Index", "Home")'>
+                     <img src='@Url.Content("~/Images/pkimv2flat1.BMP")'width="200" height="200" />
+                </a> 
+            <!--%GLOBAL_HeaderLogo%%--> 
+
+        <div class="FloatRight">
+            <br></br>
+            <br></br>
+        </div>
+    </div><!-- Inner -->
+    <div class="lowerInner">
+        <div id="headerLower">
+            <div id="cbp-hrmenu" class="cbp-hrmenu">
+                <ul>
+                    <li>
+                        <li>@Html.ActionLink("About Us", "Service", "Home")</li>
+                    </li>
+                    <li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </li>
+
+                </ul>
+   
+                    
+            </div>
+
+            <div class="clear"></div>
+        </div><!-- HeaderLower -->
+    </div>
+</div><!-- TopMenu --> 
+               
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <style>
+            .bg-4 { 
+                background-color: #DCDCDC;
+                color: #000000;
+                    }
+</style>
+        <footer class="container-fluid bg-4 text-center">
+                    <br></br>
+                    <br></br>
+
+
+                    Copyright 2019 © PKIM,INC, All Rights Reserved.
+
+
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>PKIM,INC</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <a style="border:none" href="@Url.Action("Index", "Home") ">
+                        <img src="~/Images/LOGO.jpg" width="120" height="110" />
+                    </a>
+                </div>
+                <div class="float-right">
+
+
+                        <p style="font-size: 18px">&emsp;<img src="https://img.icons8.com/dusk/35/000000/phone.png">949.200.7192 
+
+                        </p>
+                        
+
+                    <nav>
+                        <ul id="menu">
+                            <li style="font-size:20px;">@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li style="font-size:20px;">@Html.ActionLink("About", "About", "Home")</li>
+                            <li style="font-size:20px;">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - PKIM,INC, All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

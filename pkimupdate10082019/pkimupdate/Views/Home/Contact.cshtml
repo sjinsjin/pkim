@@ -1,0 +1,48 @@
+﻿@model pkimupdate.Models.Registration
+
+
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+<body>
+
+
+    <h2>Contact</h2>
+    <p style="font-size:14px;">
+        <span>949.200.7192</span>
+    </p>
+
+
+
+
+<header>
+    <h2 style="font-size:14px;">Email</h2>
+</header>
+<p>
+    @Html.ValidationSummary()
+</p>
+
+@using (Html.BeginForm())
+{
+    <p style="font-size:14px;">Name: @Html.TextBoxFor(model => model.Name)</p>
+    <p style="font-size:14px;">Email: @Html.TextBoxFor(model => model.Email)</p>
+    <p style="font-size:14px;">Mobile: @Html.TextBoxFor(model => model.Mobile)</p>
+    <p style="font-size:14px;">Message:</p>
+    <p >@Html.TextAreaFor(model => model.Message, 10,100, htmlAttributes: new {style="width: 60%; max-width: 50%;" })</p>
+    <p style="font-size:14px;">
+        <input type="submit" value="Submit" />
+    </p>
+}       
+    
+    <header>
+        <h2 style="font-size:14px;">Address</h2>
+    </header>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3417.7846796448825!2d-117.8683993432388!3d33.67045177310966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdef77efc030b%3A0x9cea04752b82c722!2s4540+Campus+Dr%2C+Newport+Beach%2C+CA+92660!5e0!3m2!1sen!2sus!4v1557872191919!5m2!1sen!2sus" width="300" height="300"  style="border:0" allowfullscreen></iframe>
+    <p style="font-size:14px;">
+        4540 Campus Dr<br />
+        Newport Beach, CA 92660
+    </p>
+</body>
